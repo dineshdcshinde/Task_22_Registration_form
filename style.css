@@ -16,7 +16,7 @@ body {
 }
 
 .form {
-  height: 50%;
+  height: 70%;
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
@@ -33,6 +33,7 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: contain;
+  border-radius: 1.5rem;
 }
 
 .right {
@@ -45,17 +46,19 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 1rem;
-  height: 50%;
+  height: 70%;
   /* width: 50%; */
   margin: 0 auto;
-  margin-top: 3%;
+  margin-top: 2%;
+  margin-left: 3%;
 }
 
 .right h2 {
   margin-left: 3%;
   font-size: 2rem;
-  color: #fff;
+  /* color: #fff; */
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 input,
@@ -70,10 +73,74 @@ select {
 
 input {
   font-size: 25px;
-  border: 1px solid #484848;
+  border: 1px solid #8a8a8a;
   padding: 1%;
+  margin-bottom: 1.09rem;
+  border-radius: 0.3rem;
+  padding: 0.5%;
+}
+
+select {
+  font-size: 25px;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.5%;
+  border: none;
+  border: 1px solid #8a8a8a;
+}
+
+select:focus {
+  background-color: #8a8a8a;
+  color: #fff;
+  outline: 3px solid #3561ff;
+  border-color: #3561ff;
 }
 
 input:focus {
-  border-color: #e8f5e9;
+  background-color: #8a8a8a;
+  color: #fff;
+  outline: 3px solid #3561ff;
+  border-color: #3561ff;
+}
+
+button {
+  margin-left: 3%;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  border: 2px solid #3561ff;
+  background-color: #3561ff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease, background-color 0.4s ease;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  transition: top 0.4s ease;
+}
+
+button:hover::before {
+  top: 100%;
+}
+
+button:hover {
+  color: #000;
+  background-color: transparent;
+  z-index: 1;
 }
